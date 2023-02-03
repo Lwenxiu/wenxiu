@@ -7,5 +7,8 @@ jobs:
     name: job1
     runs-on: ubuntu-latest
     steps: 
-      - uses: actions/checkout@v1
+      - uses: distributhor/workflow-webhook@v2
+        env:
+          webhook_url: https://shc-sma-cd48.hpeswlab.net/xie/v1/namespaces/100000002/listener?scenarioId=72beed7a-370d-4e48-9d7f-4d89ff4a16d3&integrationId=1151b717-7e49-47f6-9f0b-a7855e092308&authType=basic&sig=AAHsAv/IOvWMtpAgd4oP50VagmxpQJ+nfqf2ttVUT5yA+o+4cEOm5KedcaSkxIn5vOB936d+NIBNePB2Sa4P+51C2Oueklv4fhTrKgRiAZS8gZ/K+2Di6i/QO5vY57wh1fDarh/vkLDEzTM%3D
+          webhook_auth: "suite-admin:pat_8Hvr1nWdA8YdThFg1uAgKuioj3w9WoKx"
       - run: echo hello world
