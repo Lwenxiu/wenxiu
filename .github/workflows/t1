@@ -1,0 +1,10 @@
+on:
+  push:
+    branches:
+    - master
+jobs:
+  t1:
+    name: t1
+    runs-on: ubuntu-latest
+    steps: 
+      - run: echo hello world
