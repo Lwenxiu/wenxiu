@@ -30,7 +30,7 @@ jobs:
            url: https://xiaodan.teams.itsma-ng.com/xie/v1/namespaces/100000002/listener?scenarioId=9c97ae3c-bd7e-4c0c-af6c-e3ab72edcdc4&integrationId=0d1f0f47-e054-4427-98f8-bb650879067b&authType=url&sig=AAHhnAXQ7Ej9NcfPf82595Irl0smH8mH5DWnU39J8vCnVPTNyn+PlJ7qL5yWOW0KTtMC6P479FoagqnegQ6RdmHsHshVQiZLGFK6H79EkdMmtf1DpBCQZgyrt3b6IYeO/gbhioVQU9OoRY1QMh7LBEI3A+LjS54oWWmj4FMM4aIYZZ5ifPdcCrXrIuAe0Q3b
          #  url: https://xiaodan.teams.itsma-ng.com/xie/v1/namespaces/555500000/listener?scenarioId=372ea25c-1a6d-41f5-abe9-57d416577c28&integrationId=3f3de5d9-a0fb-400a-939a-11849aa60f74&authType=url&sig=AAEzB8+zzCIij1wn5YWqrX9e8nyFoIio0Pll5+P4YGx1vL0qBQ3psquP9EEfmWQ4IYnjQTkmzaZJNwMsCXBjH36Kp68X9Z31vFTbqnsVRgYxjoLpBPcdSZo2
         #  url: https://wenxiu.teams.itsma-ng.com/xie/v1/namespaces/100000002/listener?scenarioId=7c7675a5-9bcb-41a4-8ef4-eeb75a8dadb8&integrationId=cf366218-959e-43eb-94b6-f2daa3f4f567&authType=url&sig=AAGkiSuQz1IUlmChlmcF9QxMVTD45vNttKUWkhafCsP8fUbgW5o60I41HvJboICCX0Wz2j8sVl0Sghp49ejOOlPEYsk14wn27pQyh2+RhRL5vEYK77qPAutt/BRhlLLMhpf8t1usY8278o4ArpExJSvPMtWc1/6abzpjgStB74jSfpLnJzUCLGxBe8HnVKvI
-           data: "{\"runId\":\"1234\"}"
+           data: "{\"runId\":\"$GITHUB_RUN_ID\"}"
       - uses: trstringer/manual-approval@v1
         with:
           secret: ${{ github.TOKEN }}
