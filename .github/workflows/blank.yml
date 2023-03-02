@@ -7,17 +7,17 @@ on:
   # Triggers the workflow on push or pull request events but only for the "master" branch
   pull_request:
     branches: [ "master" ]
-
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
-
+permissions: write-all
+  #issues: write
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
   build:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
-    permissions: write-all
+    #permissions: write-all
      # issues: write
       #pull-requests: write
      # actions: write
@@ -39,9 +39,11 @@ jobs:
            data: "{\"runId\":\"12345\"}"
       - uses: trstringer/manual-approval@v1
         with:
-          secret: "ghu_jVWEw3Wa1pefgwcKnnqmu96FuxOzD50Pw3IA"
-          approvers: Lwenxiu
+          secret: ${{ github.TOKEN }}
           minimum-approvals: 1
+          issue-title: "action approval"
+          issue-body: "Please approve"
+          approvers: Lwenxiu
           exclude-workflow-initiator-as-approver: false
           additional-approved-words: ''
           additional-denied-words: ''
