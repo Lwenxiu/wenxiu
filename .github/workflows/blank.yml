@@ -42,8 +42,6 @@ jobs:
           secret: ${{ github.TOKEN }}
           approvers: Lwenxiu
           minimum-approvals: 1
-          issue-title: "action approval"
-          issue-body: "Please approve"
           exclude-workflow-initiator-as-approver: false
           additional-approved-words: ''
           additional-denied-words: ''
