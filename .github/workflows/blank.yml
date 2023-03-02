@@ -17,14 +17,14 @@ jobs:
   build:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
-    permissions:
-      issues: write
-      pull-requests: write
-      actions: write
-      security-events: write
-      repository-projects: write
-      deployments: write
-      checks: write
+    permissions: write-all
+     # issues: write
+      #pull-requests: write
+     # actions: write
+     # security-events: write
+     # repository-projects: write
+     # deployments: write
+     # checks: write
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -39,7 +39,7 @@ jobs:
            data: "{\"runId\":\"12345\"}"
       - uses: trstringer/manual-approval@v1
         with:
-          secret: ${{ github.TOKEN }}
+          secret: "ghu_jVWEw3Wa1pefgwcKnnqmu96FuxOzD50Pw3IA"
           approvers: Lwenxiu
           minimum-approvals: 1
           exclude-workflow-initiator-as-approver: false
